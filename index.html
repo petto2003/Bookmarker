@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title position-relative d-flex justify-content-center">
+        <h1 class="text-center mt-4 mb-4 position-relative py-3">Bookmarker</h1>
+    </div>
+    <div class="content text-center">
+        <i class="fa-solid fa-fan fa-spin"></i>
+        <h3 class="mx-3"> Bookmark your favorite sites </h3>
+        <i class="fa-solid fa-fan fa-spin fa-spin-reverse"></i>
+    </div>
+    <div class="container w-75 h-50 mycontainer rounded-5 mt-3 p-5">
+        <div class="input1">
+            <i class="fa-solid fa-book me-2 mb-3"></i>
+            <label for="firstInput"> Site Name</label>
+            <input type="text" class="form-control" id="firstInput" required placeholder="Bookmark Name">
+        </div>
+        <div class="input1 mt-4">
+            <i class="fa-solid fa-link me-2 mb-3"></i>
+            <label for="secondInput"> Site URL</label>
+            <input type="url" class="form-control" id="secondInput" required placeholder="Website Url">
+        </div>
+        <div class="button text-center ">
+            <button type="submit" onclick="addLink()" class="btn btn-danger py-2 px-4 mt-4">Submit</button>
+        </div>
+    </div>
+    <div class=" myContainer2 mx-auto">
+        <table class="table bg-transparent mt-5 text-center table-striped">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th class="text-success">Visit</th>
+                <th class="text-danger">Delete</th>
+            </thead>
+            <tbody id="TableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+    <script src="jss/bootstrap.bundle.min.js"></script>
+    <script src="jss/main.js"></script>
+</body>
+
+</html>
