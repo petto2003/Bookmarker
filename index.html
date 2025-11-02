@@ -1,68 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmarker</title>
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>ElectroWire - Premium Electric Wire Solutions</title>
     <link rel="stylesheet" href="css/style2.css">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="title position-relative d-flex justify-content-center">
-        <h1 class="text-center mt-4 mb-4 position-relative py-3">Bookmarker</h1>
-    </div>
-    <div class="content text-center">
-        <i class="fa-solid fa-fan fa-spin"></i>
-        <h3 class="mx-3"> Bookmark your favorite sites </h3>
-        <i class="fa-solid fa-fan fa-spin fa-spin-reverse"></i>
-    </div>
-    <div class="container w-75 h-50 mycontainer rounded-5 mt-3 p-5">
-        <div class="input1">
-            <i class="fa-solid fa-book me-2 mb-3"></i>
-            <label for="firstInput"> Site Name</label>
-            <input type="text" class="form-control" id="firstInput" required placeholder="Bookmark Name">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>ElectroWire</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <div class="input1 mt-4">
-            <i class="fa-solid fa-link me-2 mb-3"></i>
-            <label for="secondInput"> Site URL</label>
-            <input type="url" class="form-control" id="secondInput" required placeholder="Website Url">
+    </nav>
+
+    <!-- Hero Section with 3D Canvas -->
+    <section id="home" class="hero">
+        <canvas id="wireCanvas"></canvas>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="ELECTROWIRE">ELECTROWIRE</h1>
+            <p class="hero-subtitle">Powering Tomorrow's Connections</p>
+            <p class="hero-description">Experience the future of electrical conductivity with our advanced 3D wire technology</p>
+            <button class="cta-button">Explore Products</button>
         </div>
-        <div class="button text-center ">
-            <button type="submit" onclick="addLink()" class="btn btn-danger py-2 px-4 mt-4">Submit</button>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
-    </div>
-    <div class=" myContainer2 mx-auto">
-        <table class="table bg-transparent mt-5 text-center table-striped">
-            <thead>
-                <th>Index</th>
-                <th>Website Name</th>
-                <th class="text-success">Visit</th>
-                <th class="text-danger">Delete</th>
-            </thead>
-            <tbody id="TableBody">
+    </section>
 
-            </tbody>
-        </table>
-    </div>
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Premium Wire Solutions</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Power Cables</h3>
+                    <p>High-voltage transmission cables with superior conductivity and durability</p>
+                    <div class="product-specs">
+                        <span>Up to 1000V</span>
+                        <span>99.9% Copper</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Data Cables</h3>
+                    <p>Ultra-fast data transmission with minimal signal loss and interference</p>
+                    <div class="product-specs">
+                        <span>Cat 8 Standard</span>
+                        <span>40Gbps Speed</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Wires</h3>
+                    <p>Safe and reliable wiring solutions for modern smart homes</p>
+                    <div class="product-specs">
+                        <span>Fire Resistant</span>
+                        <span>25 Year Warranty</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industrial Cables</h3>
+                    <p>Heavy-duty cables designed for extreme industrial environments</p>
+                    <div class="product-specs">
+                        <span>IP68 Rated</span>
+                        <span>-40°C to 125°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Technology Section -->
+    <section id="technology" class="tech-section">
+        <div class="container">
+            <h2 class="section-title">Advanced Wire Technology</h2>
+            <div class="tech-grid">
+                <div class="tech-feature">
+                    <div class="tech-number">01</div>
+                    <h3>Nano-Coating</h3>
+                    <p>Revolutionary nano-coating technology provides superior insulation and protection against environmental factors</p>
+                </div>
+                <div class="tech-feature">
+                    <div class="tech-number">02</div>
+                    <h3>Smart Conductivity</h3>
+                    <p>Intelligent wire design optimizes electron flow for maximum efficiency and minimal energy loss</p>
+                </div>
+                <div class="tech-feature">
+                    <div class="tech-number">03</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>100% recyclable materials with sustainable manufacturing processes reducing carbon footprint</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="85">0</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-label">% Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Electric Avenue, Tech City, TC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@electrowire.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-bolt"></i>
+                    <span>ElectroWire</span>
+                </div>
+                <p>&copy; 2025 ElectroWire. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <script src="jss/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="jss/main.js"></script>
 </body>
-
 </html>
